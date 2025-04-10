@@ -677,6 +677,7 @@ footer .social a:hover{
 .certifications h1 {
   text-align: center;
   margin-bottom: 50px;
+  font-size: 6rem;
 }
 
 .cert-container {
@@ -684,7 +685,7 @@ footer .social a:hover{
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .cert-box {
@@ -694,6 +695,13 @@ footer .social a:hover{
   width: 300px;
   text-align: center;
   transition: transform 0.3s;
+}
+
+.cert-box h3{
+    font-size: 1.8rem;
+}
+.cert-box p{
+    font-size: 1.4rem;
 }
 
 .cert-box:hover {
