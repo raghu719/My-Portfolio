@@ -3,11 +3,11 @@ var typed = new Typed(".typewriter-text",
         strings: [" ",
             // "Entrepreneur",
 
-            " ",
+            // " ",
 
             // "Manager",
 
-            " ",
+            // " ",
 
             "Freelancer",
 
