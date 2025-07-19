@@ -17,7 +17,7 @@ html{
 }
 
 body{
-    background: #fcfcfc;
+    background: rgba(245, 222, 179, 0.595);
     color: black;
 }
 
@@ -732,6 +732,8 @@ footer .social a:hover{
 .cert-btn:hover {
   background: #00ff2f;
   color: white;
+  transition: 0.3s ease-in-out
+
 }
 
 /* Modal styles for fullscreen view */
@@ -815,4 +817,32 @@ footer .social a:hover{
 }
 .cert-img {
     height: 280px; /* Increased from 200px */
+}
+
+/* Linkedin follow button */
+.libutton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7px;
+    text-align: center;
+    outline: none;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    width: 200px;
+    height: 44px;
+    border-radius: 50px;
+    background-color: #0A66C2;
+    font-family: "SF Pro Text", Helvetica, sans-serif;
+
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.libutton:hover {
+    background-color: #ffffff !important;
+    color: #0A66C2 !important;
+    text-decoration: none;
+    border: 2px solid #0A66C2;
+    transition: background-color 0.3s ease, color 0.3s ease-in-out;
 }
