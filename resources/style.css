@@ -225,7 +225,7 @@ section{
 
 .heading{
     text-align: center;
-    font-size: 8rem;
+    font-size: 5.4rem;
 }
 
 .about-content h2{
@@ -676,8 +676,8 @@ footer .social a:hover{
 
 .certifications h1 {
   text-align: center;
-  margin-bottom: 50px;
-  font-size: 6rem;
+  margin-bottom: 40px;
+  /* font-size: 6rem; */
 }
 
 .cert-container {
@@ -851,11 +851,6 @@ footer .social a:hover{
 #experience {
   background: linear-gradient(135deg, #f5f7fa 0%, #fff4f4 100%);
   padding: 100px 15px;
-}
-
-#experience .heading {
-  margin-bottom: 5rem;
-  position: relative;
 }
 
 #experience .heading::after {
