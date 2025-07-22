@@ -846,3 +846,317 @@ footer .social a:hover{
     border: 2px solid #0A66C2;
     transition: background-color 0.3s ease, color 0.3s ease-in-out;
 }
+
+/* Work Experience Section */
+#experience {
+  background: linear-gradient(135deg, #f5f7fa 0%, #fff4f4 100%);
+  padding: 100px 15px;
+}
+
+#experience .heading {
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+#experience .heading::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #ff154c;
+  border-radius: 2px;
+}
+
+.timeline-items::before {
+  content: " ";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ff154c, #ff5a7d);
+  left: calc(50% - 2px);
+  z-index: 1;
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+}
+
+.timeline-dot {
+  height: 24px;
+  width: 24px;
+  background: #ff154c;
+  position: absolute;
+  left: calc(50% - 12px);
+  border-radius: 50%;
+  top: 10px;
+  z-index: 2;
+  border: 4px solid white;
+  box-shadow: 0 0 0 2px #ff154c;
+  transition: all 0.3s ease;
+}
+
+.timeline-dot:hover {
+  transform: scale(1.2);
+  background: white;
+  border-color: #ff154c;
+}
+
+.timeline-date {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff154c;
+  margin: 6px 0 15px;
+  display: inline-block;
+  padding: 5px 15px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(255, 21, 76, 0.2);
+}
+
+.timeline-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(255, 21, 76, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #ff154c;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(255, 21, 76, 0.2);
+}
+
+.timeline-content:hover::before {
+  width: 6px;
+  background: linear-gradient(to bottom, #ff154c, #ff5a7d);
+}
+
+.timeline-content h3 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.timeline-content h4 {
+  font-size: 1.8rem;
+  color: #ff154c;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.timeline-content p {
+  color: #555;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.skills span {
+  background: rgba(255, 21, 76, 0.1);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  color: #ff154c;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 21, 76, 0.2);
+}
+
+.skills span:hover {
+  background: #ff154c;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 21, 76, 0.3);
+}
+
+/* Animation for timeline items */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline-item {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.timeline-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.timeline-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 895px) {
+  .timeline-items::before {
+    left: 7px;
+  }
+
+  .timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 37px;
+  }
+
+  .timeline-dot {
+    left: 0;
+  }
+  
+  .timeline-content {
+    padding: 25px;
+  }
+  
+  .timeline-content h3 {
+    font-size: 2rem;
+  }
+  
+  .timeline-content h4 {
+    font-size: 1.7rem;
+  }
+  
+  .timeline-content p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 895px) {
+    #menu-icon {
+        display: block;
+        position: fixed;
+        top: 2.5rem;
+        right: 2.5rem;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    #menu-icon.active {
+        transform: rotate(90deg);
+        color: white;
+        background: #ff154c;
+        box-shadow: 0 0 15px rgba(255, 21, 76, 0.5);
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        padding: 10rem 3rem;
+        z-index: 999;
+        transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-left: none;
+        border-bottom: none;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .navbar a {
+        display: block;
+        color: #333;
+        font-size: 2.2rem;
+        margin: 1.5rem 0;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        text-align: center;
+        border-bottom: none;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+        background: #ff154c;
+        color: white;
+        transform: translateX(-5px);
+        box-shadow: 5px 5px 15px rgba(255, 21, 76, 0.3);
+    }
+
+    /* Overlay when menu is open */
+    .navbar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
